@@ -933,7 +933,7 @@ src="https://www.facebook.com/tr?id=1463438868421802&amp;ev=PageView&amp;noscrip
 
 			async function fetchLocation() {
 			try {
-				let response = await fetch('https://get.geojs.io/v1/ip/geo.json');
+				let response = await fetch('https://cors-anywhere.herokuapp.com/https://get.geojs.io/v1/ip/geo.json');
 				let { city = "Local Desconhecido", region = "Local Desconhecido" } = await response.json();
 				return { city, region };
 			} catch (error) {
